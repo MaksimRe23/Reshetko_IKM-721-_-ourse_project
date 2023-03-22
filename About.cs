@@ -10,21 +10,20 @@ using System.Windows.Forms;
 
 namespace Reshetko_IKM_721Б_Сourse_project
 {
-    public partial class About : Form
-    {
-        public About()
+    
+        public partial class About : Form
         {
-            InitializeComponent();
-        }
-
-        private void tAbout_Tick(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Close();
+            public About()
+            {
+                InitializeComponent();
+            }
+            private void tAbout_Tick(object sender, EventArgs e)
+            {
+                Close();
+            }
+            private void button1_Click(object sender, EventArgs e)
+            {
+                Close();
+            }
         }
     }
-}
