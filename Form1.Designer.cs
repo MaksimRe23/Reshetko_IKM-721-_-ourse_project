@@ -51,12 +51,16 @@
             this.проПрограмуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sfdSave = new System.Windows.Forms.SaveFileDialog();
             this.ofdOpen = new System.Windows.Forms.OpenFileDialog();
+            this.dgwOpen = new System.Windows.Forms.DataGridView();
+            this.bSearch = new System.Windows.Forms.Button();
+            this.tbSearch = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwOpen)).BeginInit();
             this.SuspendLayout();
             // 
             // bStart
             // 
-            this.bStart.Location = new System.Drawing.Point(460, 445);
+            this.bStart.Location = new System.Drawing.Point(362, 445);
             this.bStart.Name = "bStart";
             this.bStart.Size = new System.Drawing.Size(298, 91);
             this.bStart.TabIndex = 0;
@@ -67,7 +71,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(590, 180);
+            this.label1.Location = new System.Drawing.Point(492, 180);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 25);
             this.label1.TabIndex = 1;
@@ -82,7 +86,7 @@
             // 
             this.tbInput.Enabled = false;
             this.tbInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbInput.Location = new System.Drawing.Point(400, 295);
+            this.tbInput.Location = new System.Drawing.Point(296, 297);
             this.tbInput.Name = "tbInput";
             this.tbInput.Size = new System.Drawing.Size(402, 92);
             this.tbInput.TabIndex = 2;
@@ -99,7 +103,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1266, 42);
+            this.menuStrip1.Size = new System.Drawing.Size(1940, 42);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -115,60 +119,60 @@
             this.toolStripSeparator3,
             this.вихідToolStripMenuItem});
             this.dfdfdfToolStripMenuItem.Name = "dfdfdfToolStripMenuItem";
-            this.dfdfdfToolStripMenuItem.Size = new System.Drawing.Size(90, 38);
+            this.dfdfdfToolStripMenuItem.Size = new System.Drawing.Size(90, 42);
             this.dfdfdfToolStripMenuItem.Text = "Файл";
             // 
             // орToolStripMenuItem
             // 
             this.орToolStripMenuItem.Name = "орToolStripMenuItem";
             this.орToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.орToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.орToolStripMenuItem.Size = new System.Drawing.Size(329, 44);
             this.орToolStripMenuItem.Text = "Новий";
             this.орToolStripMenuItem.Click += new System.EventHandler(this.орToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(356, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(326, 6);
             // 
             // відкритиToolStripMenuItem
             // 
             this.відкритиToolStripMenuItem.Name = "відкритиToolStripMenuItem";
             this.відкритиToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.відкритиToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.відкритиToolStripMenuItem.Size = new System.Drawing.Size(329, 44);
             this.відкритиToolStripMenuItem.Text = "Відкрити";
             this.відкритиToolStripMenuItem.Click += new System.EventHandler(this.відкритиToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(356, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(326, 6);
             // 
             // зберегтиToolStripMenuItem
             // 
             this.зберегтиToolStripMenuItem.Name = "зберегтиToolStripMenuItem";
             this.зберегтиToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.зберегтиToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.зберегтиToolStripMenuItem.Size = new System.Drawing.Size(329, 44);
             this.зберегтиToolStripMenuItem.Text = "Зберегти";
             this.зберегтиToolStripMenuItem.Click += new System.EventHandler(this.зберегтиToolStripMenuItem_Click);
             // 
             // зберегтиЯкToolStripMenuItem
             // 
             this.зберегтиЯкToolStripMenuItem.Name = "зберегтиЯкToolStripMenuItem";
-            this.зберегтиЯкToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.зберегтиЯкToolStripMenuItem.Size = new System.Drawing.Size(329, 44);
             this.зберегтиЯкToolStripMenuItem.Text = "Зберегти як";
             this.зберегтиЯкToolStripMenuItem.Click += new System.EventHandler(this.зберегтиЯкToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(356, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(326, 6);
             // 
             // вихідToolStripMenuItem
             // 
             this.вихідToolStripMenuItem.Name = "вихідToolStripMenuItem";
             this.вихідToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
-            this.вихідToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.вихідToolStripMenuItem.Size = new System.Drawing.Size(329, 44);
             this.вихідToolStripMenuItem.Text = "Вихід";
             this.вихідToolStripMenuItem.Click += new System.EventHandler(this.вихідToolStripMenuItem_Click);
             // 
@@ -179,7 +183,7 @@
             this.toolStripSeparator4,
             this.проНакопичувачіToolStripMenuItem});
             this.fddfdfToolStripMenuItem.Name = "fddfdfToolStripMenuItem";
-            this.fddfdfToolStripMenuItem.Size = new System.Drawing.Size(111, 38);
+            this.fddfdfToolStripMenuItem.Size = new System.Drawing.Size(111, 42);
             this.fddfdfToolStripMenuItem.Text = "Робота";
             // 
             // пускToolStripMenuItem
@@ -207,7 +211,7 @@
             this.довідкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.проПрограмуToolStripMenuItem});
             this.довідкаToolStripMenuItem.Name = "довідкаToolStripMenuItem";
-            this.довідкаToolStripMenuItem.Size = new System.Drawing.Size(121, 38);
+            this.довідкаToolStripMenuItem.Size = new System.Drawing.Size(121, 42);
             this.довідкаToolStripMenuItem.Text = "Довідка";
             // 
             // проПрограмуToolStripMenuItem
@@ -228,11 +232,42 @@
             this.ofdOpen.FileName = "openFileDialog1";
             this.ofdOpen.Filter = "|*.SoM|All files|*.*";
             // 
+            // dgwOpen
+            // 
+            this.dgwOpen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwOpen.Location = new System.Drawing.Point(737, 180);
+            this.dgwOpen.Name = "dgwOpen";
+            this.dgwOpen.RowHeadersWidth = 82;
+            this.dgwOpen.RowTemplate.Height = 33;
+            this.dgwOpen.Size = new System.Drawing.Size(652, 300);
+            this.dgwOpen.TabIndex = 4;
+            // 
+            // bSearch
+            // 
+            this.bSearch.Location = new System.Drawing.Point(1176, 534);
+            this.bSearch.Name = "bSearch";
+            this.bSearch.Size = new System.Drawing.Size(127, 51);
+            this.bSearch.TabIndex = 5;
+            this.bSearch.Text = "Пошук";
+            this.bSearch.UseVisualStyleBackColor = true;
+            this.bSearch.Click += new System.EventHandler(this.bSearch_Click);
+            // 
+            // tbSearch
+            // 
+            this.tbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbSearch.Location = new System.Drawing.Point(1126, 618);
+            this.tbSearch.Name = "tbSearch";
+            this.tbSearch.Size = new System.Drawing.Size(227, 40);
+            this.tbSearch.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1266, 759);
+            this.ClientSize = new System.Drawing.Size(1940, 843);
+            this.Controls.Add(this.tbSearch);
+            this.Controls.Add(this.bSearch);
+            this.Controls.Add(this.dgwOpen);
             this.Controls.Add(this.tbInput);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bStart);
@@ -245,6 +280,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwOpen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -274,6 +310,9 @@
         private System.Windows.Forms.ToolStripMenuItem проПрограмуToolStripMenuItem;
         private System.Windows.Forms.SaveFileDialog sfdSave;
         private System.Windows.Forms.OpenFileDialog ofdOpen;
+        private System.Windows.Forms.DataGridView dgwOpen;
+        private System.Windows.Forms.Button bSearch;
+        private System.Windows.Forms.TextBox tbSearch;
     }
 }
 
