@@ -54,15 +54,23 @@
             this.dgwOpen = new System.Windows.Forms.DataGridView();
             this.bSearch = new System.Windows.Forms.Button();
             this.tbSearch = new System.Windows.Forms.TextBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwOpen)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // bStart
             // 
-            this.bStart.Location = new System.Drawing.Point(362, 445);
+            this.bStart.Location = new System.Drawing.Point(557, 467);
             this.bStart.Name = "bStart";
-            this.bStart.Size = new System.Drawing.Size(298, 91);
+            this.bStart.Size = new System.Drawing.Size(242, 55);
             this.bStart.TabIndex = 0;
             this.bStart.Text = "Пуск";
             this.bStart.UseVisualStyleBackColor = true;
@@ -71,7 +79,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(492, 180);
+            this.label1.Location = new System.Drawing.Point(618, 179);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 25);
             this.label1.TabIndex = 1;
@@ -86,7 +94,7 @@
             // 
             this.tbInput.Enabled = false;
             this.tbInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbInput.Location = new System.Drawing.Point(296, 297);
+            this.tbInput.Location = new System.Drawing.Point(461, 284);
             this.tbInput.Name = "tbInput";
             this.tbInput.Size = new System.Drawing.Size(402, 92);
             this.tbInput.TabIndex = 2;
@@ -119,7 +127,7 @@
             this.toolStripSeparator3,
             this.вихідToolStripMenuItem});
             this.dfdfdfToolStripMenuItem.Name = "dfdfdfToolStripMenuItem";
-            this.dfdfdfToolStripMenuItem.Size = new System.Drawing.Size(90, 42);
+            this.dfdfdfToolStripMenuItem.Size = new System.Drawing.Size(90, 36);
             this.dfdfdfToolStripMenuItem.Text = "Файл";
             // 
             // орToolStripMenuItem
@@ -183,7 +191,7 @@
             this.toolStripSeparator4,
             this.проНакопичувачіToolStripMenuItem});
             this.fddfdfToolStripMenuItem.Name = "fddfdfToolStripMenuItem";
-            this.fddfdfToolStripMenuItem.Size = new System.Drawing.Size(111, 42);
+            this.fddfdfToolStripMenuItem.Size = new System.Drawing.Size(111, 36);
             this.fddfdfToolStripMenuItem.Text = "Робота";
             // 
             // пускToolStripMenuItem
@@ -211,7 +219,7 @@
             this.довідкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.проПрограмуToolStripMenuItem});
             this.довідкаToolStripMenuItem.Name = "довідкаToolStripMenuItem";
-            this.довідкаToolStripMenuItem.Size = new System.Drawing.Size(121, 42);
+            this.довідкаToolStripMenuItem.Size = new System.Drawing.Size(121, 36);
             this.довідкаToolStripMenuItem.Text = "Довідка";
             // 
             // проПрограмуToolStripMenuItem
@@ -235,18 +243,18 @@
             // dgwOpen
             // 
             this.dgwOpen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwOpen.Location = new System.Drawing.Point(737, 180);
+            this.dgwOpen.Location = new System.Drawing.Point(26, 37);
             this.dgwOpen.Name = "dgwOpen";
             this.dgwOpen.RowHeadersWidth = 82;
             this.dgwOpen.RowTemplate.Height = 33;
-            this.dgwOpen.Size = new System.Drawing.Size(652, 300);
+            this.dgwOpen.Size = new System.Drawing.Size(1014, 564);
             this.dgwOpen.TabIndex = 4;
             // 
             // bSearch
             // 
-            this.bSearch.Location = new System.Drawing.Point(1176, 534);
+            this.bSearch.Location = new System.Drawing.Point(1141, 103);
             this.bSearch.Name = "bSearch";
-            this.bSearch.Size = new System.Drawing.Size(127, 51);
+            this.bSearch.Size = new System.Drawing.Size(197, 69);
             this.bSearch.TabIndex = 5;
             this.bSearch.Text = "Пошук";
             this.bSearch.UseVisualStyleBackColor = true;
@@ -254,23 +262,64 @@
             // 
             // tbSearch
             // 
-            this.tbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbSearch.Location = new System.Drawing.Point(1126, 618);
+            this.tbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbSearch.Location = new System.Drawing.Point(1077, 233);
             this.tbSearch.Name = "tbSearch";
-            this.tbSearch.Size = new System.Drawing.Size(227, 40);
+            this.tbSearch.Size = new System.Drawing.Size(295, 49);
             this.tbSearch.TabIndex = 6;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(12, 45);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1909, 775);
+            this.tabControl1.TabIndex = 7;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.tbInput);
+            this.tabPage1.Controls.Add(this.bStart);
+            this.tabPage1.Location = new System.Drawing.Point(8, 39);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1893, 728);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Введення даних";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.dgwOpen);
+            this.tabPage2.Controls.Add(this.tbSearch);
+            this.tabPage2.Controls.Add(this.bSearch);
+            this.tabPage2.Location = new System.Drawing.Point(8, 39);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1893, 728);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Робота з файлами";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 805);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1940, 38);
+            this.statusStrip1.TabIndex = 8;
+            this.statusStrip1.Text = "statusStrip1";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1940, 843);
-            this.Controls.Add(this.tbSearch);
-            this.Controls.Add(this.bSearch);
-            this.Controls.Add(this.dgwOpen);
-            this.Controls.Add(this.tbInput);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.bStart);
+            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
@@ -281,6 +330,11 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwOpen)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -313,6 +367,11 @@
         private System.Windows.Forms.DataGridView dgwOpen;
         private System.Windows.Forms.Button bSearch;
         private System.Windows.Forms.TextBox tbSearch;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.StatusStrip statusStrip1;
     }
 }
 
