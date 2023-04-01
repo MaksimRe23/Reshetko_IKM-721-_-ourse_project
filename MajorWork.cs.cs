@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Windows.Forms;
+using System.Collections;
 
 namespace Reshetko_IKM_721Б_Сourse_project
 {
@@ -20,6 +21,11 @@ namespace Reshetko_IKM_721Б_Сourse_project
         private string Result; // Поле результату
         public bool Modify;
         private int Key;// поле ключа
+        public Queue myQueue = new Queue();
+        public string[] smyQueue = new string[100];
+
+        public Stack myStack = new Stack();
+        public string[] myArr = new string[100];
 
         // Методи
 

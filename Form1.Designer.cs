@@ -58,19 +58,39 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.LabelStack = new System.Windows.Forms.Label();
+            this.StackText = new System.Windows.Forms.Label();
+            this.Stacktb = new System.Windows.Forms.TextBox();
+            this.Peek = new System.Windows.Forms.Button();
+            this.Pop = new System.Windows.Forms.Button();
+            this.Push = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.Enqueue = new System.Windows.Forms.Button();
+            this.Dequeue = new System.Windows.Forms.Button();
+            this.Peek_q = new System.Windows.Forms.Button();
+            this.Queuetb = new System.Windows.Forms.TextBox();
+            this.LabelQueue = new System.Windows.Forms.Label();
+            this.QueueText = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwOpen)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bStart
             // 
-            this.bStart.Location = new System.Drawing.Point(557, 467);
+            this.bStart.Location = new System.Drawing.Point(556, 467);
+            this.bStart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bStart.Name = "bStart";
-            this.bStart.Size = new System.Drawing.Size(242, 55);
+            this.bStart.Size = new System.Drawing.Size(242, 56);
             this.bStart.TabIndex = 0;
             this.bStart.Text = "Пуск";
             this.bStart.UseVisualStyleBackColor = true;
@@ -79,7 +99,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(618, 179);
+            this.label1.Location = new System.Drawing.Point(618, 180);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 25);
             this.label1.TabIndex = 1;
@@ -94,7 +115,8 @@
             // 
             this.tbInput.Enabled = false;
             this.tbInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbInput.Location = new System.Drawing.Point(461, 284);
+            this.tbInput.Location = new System.Drawing.Point(460, 284);
+            this.tbInput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbInput.Name = "tbInput";
             this.tbInput.Size = new System.Drawing.Size(402, 92);
             this.tbInput.TabIndex = 2;
@@ -110,8 +132,8 @@
             this.довідкаToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1940, 42);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 5, 0, 5);
+            this.menuStrip1.Size = new System.Drawing.Size(1259, 46);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -243,18 +265,20 @@
             // dgwOpen
             // 
             this.dgwOpen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwOpen.Location = new System.Drawing.Point(26, 37);
+            this.dgwOpen.Location = new System.Drawing.Point(8, 48);
+            this.dgwOpen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgwOpen.Name = "dgwOpen";
             this.dgwOpen.RowHeadersWidth = 82;
             this.dgwOpen.RowTemplate.Height = 33;
-            this.dgwOpen.Size = new System.Drawing.Size(1014, 564);
+            this.dgwOpen.Size = new System.Drawing.Size(968, 505);
             this.dgwOpen.TabIndex = 4;
             // 
             // bSearch
             // 
-            this.bSearch.Location = new System.Drawing.Point(1141, 103);
+            this.bSearch.Location = new System.Drawing.Point(1017, 129);
+            this.bSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bSearch.Name = "bSearch";
-            this.bSearch.Size = new System.Drawing.Size(197, 69);
+            this.bSearch.Size = new System.Drawing.Size(161, 45);
             this.bSearch.TabIndex = 5;
             this.bSearch.Text = "Пошук";
             this.bSearch.UseVisualStyleBackColor = true;
@@ -263,19 +287,22 @@
             // tbSearch
             // 
             this.tbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbSearch.Location = new System.Drawing.Point(1077, 233);
+            this.tbSearch.Location = new System.Drawing.Point(996, 227);
+            this.tbSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbSearch.Name = "tbSearch";
-            this.tbSearch.Size = new System.Drawing.Size(295, 49);
+            this.tbSearch.Size = new System.Drawing.Size(207, 49);
             this.tbSearch.TabIndex = 6;
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 45);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Location = new System.Drawing.Point(0, 69);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1909, 775);
+            this.tabControl1.Size = new System.Drawing.Size(1259, 629);
             this.tabControl1.TabIndex = 7;
             // 
             // tabPage1
@@ -284,9 +311,10 @@
             this.tabPage1.Controls.Add(this.tbInput);
             this.tabPage1.Controls.Add(this.bStart);
             this.tabPage1.Location = new System.Drawing.Point(8, 39);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1893, 728);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabPage1.Size = new System.Drawing.Size(1243, 582);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Введення даних";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -297,32 +325,194 @@
             this.tabPage2.Controls.Add(this.tbSearch);
             this.tabPage2.Controls.Add(this.bSearch);
             this.tabPage2.Location = new System.Drawing.Point(8, 39);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1893, 728);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabPage2.Size = new System.Drawing.Size(1243, 582);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Робота з файлами";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.splitContainer1);
+            this.tabPage3.Location = new System.Drawing.Point(8, 39);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabPage3.Size = new System.Drawing.Size(1243, 582);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Стек / Черга";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(4, 5);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.LightGray;
+            this.splitContainer1.Panel1.Controls.Add(this.Peek);
+            this.splitContainer1.Panel1.Controls.Add(this.LabelStack);
+            this.splitContainer1.Panel1.Controls.Add(this.StackText);
+            this.splitContainer1.Panel1.Controls.Add(this.Stacktb);
+            this.splitContainer1.Panel1.Controls.Add(this.Pop);
+            this.splitContainer1.Panel1.Controls.Add(this.Push);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.Silver;
+            this.splitContainer1.Panel2.Controls.Add(this.QueueText);
+            this.splitContainer1.Panel2.Controls.Add(this.LabelQueue);
+            this.splitContainer1.Panel2.Controls.Add(this.Queuetb);
+            this.splitContainer1.Panel2.Controls.Add(this.Peek_q);
+            this.splitContainer1.Panel2.Controls.Add(this.Dequeue);
+            this.splitContainer1.Panel2.Controls.Add(this.Enqueue);
+            this.splitContainer1.Size = new System.Drawing.Size(1235, 572);
+            this.splitContainer1.SplitterDistance = 301;
+            this.splitContainer1.TabIndex = 0;
+            // 
+            // LabelStack
+            // 
+            this.LabelStack.AutoSize = true;
+            this.LabelStack.Location = new System.Drawing.Point(160, 433);
+            this.LabelStack.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LabelStack.Name = "LabelStack";
+            this.LabelStack.Size = new System.Drawing.Size(119, 25);
+            this.LabelStack.TabIndex = 5;
+            this.LabelStack.Text = "LabelStack";
+            // 
+            // StackText
+            // 
+            this.StackText.AutoSize = true;
+            this.StackText.Location = new System.Drawing.Point(200, 93);
+            this.StackText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.StackText.Name = "StackText";
+            this.StackText.Size = new System.Drawing.Size(60, 25);
+            this.StackText.TabIndex = 4;
+            this.StackText.Text = "Стек";
+            // 
+            // Stacktb
+            // 
+            this.Stacktb.Location = new System.Drawing.Point(134, 196);
+            this.Stacktb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Stacktb.Name = "Stacktb";
+            this.Stacktb.Size = new System.Drawing.Size(200, 31);
+            this.Stacktb.TabIndex = 3;
+            // 
+            // Peek
+            // 
+            this.Peek.Location = new System.Drawing.Point(287, 266);
+            this.Peek.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Peek.Name = "Peek";
+            this.Peek.Size = new System.Drawing.Size(97, 43);
+            this.Peek.TabIndex = 2;
+            this.Peek.Text = "Peek";
+            this.Peek.UseVisualStyleBackColor = true;
+            this.Peek.Click += new System.EventHandler(this.Peek_Click);
+            // 
+            // Pop
+            // 
+            this.Pop.Location = new System.Drawing.Point(165, 266);
+            this.Pop.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Pop.Name = "Pop";
+            this.Pop.Size = new System.Drawing.Size(114, 44);
+            this.Pop.TabIndex = 1;
+            this.Pop.Text = "Pop";
+            this.Pop.UseVisualStyleBackColor = true;
+            this.Pop.Click += new System.EventHandler(this.Pop_Click);
+            // 
+            // Push
+            // 
+            this.Push.Location = new System.Drawing.Point(38, 265);
+            this.Push.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Push.Name = "Push";
+            this.Push.Size = new System.Drawing.Size(107, 44);
+            this.Push.TabIndex = 0;
+            this.Push.Text = "Push";
+            this.Push.UseVisualStyleBackColor = true;
+            this.Push.Click += new System.EventHandler(this.Push_Click);
+            // 
             // statusStrip1
             // 
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
-            this.statusStrip1.Location = new System.Drawing.Point(0, 805);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 707);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1940, 38);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 14, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(1259, 22);
             this.statusStrip1.TabIndex = 8;
             this.statusStrip1.Text = "statusStrip1";
+            // 
+            // Enqueue
+            // 
+            this.Enqueue.Location = new System.Drawing.Point(86, 265);
+            this.Enqueue.Name = "Enqueue";
+            this.Enqueue.Size = new System.Drawing.Size(94, 44);
+            this.Enqueue.TabIndex = 0;
+            this.Enqueue.Text = "Enqueue";
+            this.Enqueue.UseVisualStyleBackColor = true;
+            this.Enqueue.Click += new System.EventHandler(this.Enqueue_Click);
+            // 
+            // Dequeue
+            // 
+            this.Dequeue.Location = new System.Drawing.Point(210, 266);
+            this.Dequeue.Name = "Dequeue";
+            this.Dequeue.Size = new System.Drawing.Size(90, 44);
+            this.Dequeue.TabIndex = 1;
+            this.Dequeue.Text = "Dequeue";
+            this.Dequeue.UseVisualStyleBackColor = true;
+            this.Dequeue.Click += new System.EventHandler(this.Dequeue_Click);
+            // 
+            // Peek_q
+            // 
+            this.Peek_q.Location = new System.Drawing.Point(339, 265);
+            this.Peek_q.Name = "Peek_q";
+            this.Peek_q.Size = new System.Drawing.Size(94, 45);
+            this.Peek_q.TabIndex = 2;
+            this.Peek_q.Text = "Peek_q";
+            this.Peek_q.UseVisualStyleBackColor = true;
+            this.Peek_q.Click += new System.EventHandler(this.Peek_q_Click);
+            // 
+            // Queuetb
+            // 
+            this.Queuetb.Location = new System.Drawing.Point(158, 196);
+            this.Queuetb.Name = "Queuetb";
+            this.Queuetb.Size = new System.Drawing.Size(187, 31);
+            this.Queuetb.TabIndex = 3;
+            // 
+            // LabelQueue
+            // 
+            this.LabelQueue.AutoSize = true;
+            this.LabelQueue.Location = new System.Drawing.Point(180, 433);
+            this.LabelQueue.Name = "LabelQueue";
+            this.LabelQueue.Size = new System.Drawing.Size(129, 25);
+            this.LabelQueue.TabIndex = 4;
+            this.LabelQueue.Text = "LabelQueue";
+            // 
+            // QueueText
+            // 
+            this.QueueText.AutoSize = true;
+            this.QueueText.Location = new System.Drawing.Point(205, 93);
+            this.QueueText.Name = "QueueText";
+            this.QueueText.Size = new System.Drawing.Size(70, 25);
+            this.QueueText.TabIndex = 5;
+            this.QueueText.Text = "Черга";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1940, 843);
+            this.ClientSize = new System.Drawing.Size(1259, 729);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
+            this.ShowIcon = false;
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
@@ -335,6 +525,13 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            this.splitContainer1.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -372,6 +569,20 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.Button Peek;
+        private System.Windows.Forms.Button Pop;
+        private System.Windows.Forms.Button Push;
+        private System.Windows.Forms.Label LabelStack;
+        private System.Windows.Forms.Label StackText;
+        private System.Windows.Forms.TextBox Stacktb;
+        private System.Windows.Forms.Label QueueText;
+        private System.Windows.Forms.Label LabelQueue;
+        private System.Windows.Forms.TextBox Queuetb;
+        private System.Windows.Forms.Button Peek_q;
+        private System.Windows.Forms.Button Dequeue;
+        private System.Windows.Forms.Button Enqueue;
     }
 }
 
