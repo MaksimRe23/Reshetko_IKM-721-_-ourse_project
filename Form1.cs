@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
+using System.IO;
 
 namespace Reshetko_IKM_721Б_Сourse_project
 {
     public partial class Form1 : Form
     {
         private bool Mode; // Режим дозволу / заборони введення даних
+        private SaveFileDialog sf;
         private MajorWork MajorObject; //   
 
         ToolStripLabel dateLabel;
@@ -317,6 +319,40 @@ namespace Reshetko_IKM_721Б_Сourse_project
                 }
                 if (MajorObject.myQueue.Count == 0)
                     MessageBox.Show("\nЧерга порожня!");
+            }
+        }
+
+        private void зберегтиЯкToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sf = new SaveFileDialog();
+
+            sf.Filter = @"Текстовий файл (*.txt)|*.txt|Текстові файли TXT(*.txt)|*.txt|CSV-файл (*.csv)|*.csv|Bin-файл (*.bin)|*.bin";
+
+            if (sf.ShowDialog() == DialogResult.OK)
+            {
+                MajorObject.WriteSaveTextFileName(sf.FileName);
+                MajorObject.SaveToTextFile(sf.FileName, dgwOpen);
+            }
+        }
+
+        private void зберегтиToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (MajorObject.SaveTextFileNameExists())
+
+                MajorObject.SaveToTextFile(MajorObject.ReadSaveTextFileName(), dgwOpen);
+            else
+                зберегтиЯкToolStripMenuItem1_Click(sender, e);
+        }
+
+        private void відкритиToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog o = new OpenFileDialog();
+
+            o.Filter = @"Текстовий файл (*.txt)|*.txt|Текстовий файл TXT(*.txt)|*.txt|CSV-файл (*.csv)|*.csv|Bin-файл (*.bin)|*.bin";
+
+            if (o.ShowDialog() == DialogResult.OK)
+            {
+                richTextBox1.Text = File.ReadAllText(o.FileName, Encoding.Default);
             }
         }
     }
