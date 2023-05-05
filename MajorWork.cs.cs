@@ -298,16 +298,25 @@ namespace Reshetko_IKM_721Б_Сourse_project
         }
         public void Task() // метод реалізації програмного завдання
         {
-            if (this.Data.Length > 5)
-            {
-                this.Result = Convert.ToString(true);
 
-            }
-            else
+            string[] numbers = this.Data.Split(' ');
+            List<int> divisibleByThree = new List<int>();
+
+            foreach (string number in numbers)
             {
-                this.Result = Convert.ToString(false);
+                if (int.TryParse(number, out int n) && n % 3 == 0)
+                {
+                    divisibleByThree.Add(n);
+                }
             }
+
+            divisibleByThree.Sort();
+            this.Result = string.Join(" ", divisibleByThree);
+
+
+
             this.Modify = true;
+
         }
     }
 }

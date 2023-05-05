@@ -122,7 +122,8 @@ namespace Reshetko_IKM_721Б_Сourse_project
         {
             tClock.Stop();
             tClock.Start();
-            if ((e.KeyChar >= '0') & (e.KeyChar <= '9') | (e.KeyChar == (char)8))
+
+            if (char.IsDigit(e.KeyChar) || e.KeyChar == ' ' || e.KeyChar == (char)Keys.Back && tbInput.Text.Length < 60)
             {
                 return;
             }
